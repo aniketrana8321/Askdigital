@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
+
+class PostCategory extends Model
+{
+    use HasFactory;
+
+    protected $fillable = ['name', 'slug', 'seo_title', 'seo_meta_description'];
+
+    // Mutator to generate slug automatically
+    public static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($category) {
+            $category->slug = Str::slug($category->name);
+        });
+    }
+     public function posts()
+    {
+        return $this->hasMany(Post::class, 'category_id');
+    }
+}

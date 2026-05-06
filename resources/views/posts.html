@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html  lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="uploads/favicon.png">
+    
+    <title>Admin Panel</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://demo.phpscriptpoint.com/desix/dist-admin/fontawesome-free/css/all.min.css">
+<link rel="stylesheet" href="https://demo.phpscriptpoint.com/desix/dist-admin/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://demo.phpscriptpoint.com/desix/dist-admin/css/fontawesome-iconpicker.min.css">
+<link rel="stylesheet" href="https://demo.phpscriptpoint.com/desix/dist-admin/css/sb-admin-2.min.css">
+<link rel="stylesheet" href="https://demo.phpscriptpoint.com/desix/dist-admin/css/jquery-ui.css">
+<link rel="stylesheet" href="https://demo.phpscriptpoint.com/desix/dist-admin/css/jquery.timepicker.css">
+<link rel="stylesheet" href="https://demo.phpscriptpoint.com/desix/dist-admin/css/select2.min.css">
+<link rel="stylesheet" href="https://demo.phpscriptpoint.com/desix/dist-admin/css/bootstrap5-toggle.min.css">
+<link rel="stylesheet" href="https://demo.phpscriptpoint.com/desix/dist-admin/css/dataTables.bootstrap5.min.css">
+<link rel="stylesheet" href="https://demo.phpscriptpoint.com/desix/dist-admin/css/magnific-popup.css">
+<link rel="stylesheet" href="https://demo.phpscriptpoint.com/desix/dist-admin/css/flaticon.css">
+<link rel="stylesheet" href="https://demo.phpscriptpoint.com/desix/dist-admin/css/spacing.css">
+<link rel="stylesheet" href="https://demo.phpscriptpoint.com/desix/dist-admin/css/style.css">
+    <script src="https://demo.phpscriptpoint.com/desix/dist-admin/js/jquery-3.7.1.min.js"></script>
+<script src="https://demo.phpscriptpoint.com/desix/dist-admin/js/popper.min.js"></script>
+<script src="https://demo.phpscriptpoint.com/desix/dist-admin/js/bootstrap.min.js"></script>
+<script src="https://demo.phpscriptpoint.com/desix/dist-admin/js/jquery.easing.min.js"></script>
+<script src="https://demo.phpscriptpoint.com/desix/dist-admin/js/sweetalert2.min.js"></script>
+<script src="https://demo.phpscriptpoint.com/desix/dist-admin/js/jscolor.js"></script>
+<script src="https://demo.phpscriptpoint.com/desix/dist-admin/js/jquery.timepicker.js"></script>
+<script src="https://demo.phpscriptpoint.com/desix/dist-admin/js/jquery-ui.js"></script>
+<script src="https://demo.phpscriptpoint.com/desix/dist-admin/js/select2.min.js"></script>
+<script src="https://demo.phpscriptpoint.com/desix/dist-admin/js/bootstrap5-toggle.jquery.min.js"></script>
+<script src="https://demo.phpscriptpoint.com/desix/dist-admin/js/fontawesome-iconpicker.min.js"></script>
+<script src="https://demo.phpscriptpoint.com/desix/dist-admin/js/tinymce/tinymce.min.js"></script>
+<script src="https://demo.phpscriptpoint.com/desix/dist-admin/js/jquery.dataTables.min.js"></script>
+<script src="https://demo.phpscriptpoint.com/desix/dist-admin/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://demo.phpscriptpoint.com/desix/dist-admin/js/jquery.magnific-popup.min.js"></script>
+</head>
+<style>
+    .bg-gradient-primary {
+    background-color: #3b65ad !important;
+     background-image:  #3b65ad !important;
+    background-size: cover;
+
+}
+.btn-primary {
+    color: #fff;
+    background-color: #58b05c;
+    border-color: #58b05c;
+}
+.text-success {
+    color: #ef36a2 !important;
+}
+.btn-info {
+    color: #fff;
+    background-color: #58b05c;
+    border-color: #58b05c;
+}
+</style>
+<body id="page-top">
+    <div id="wrapper">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#/dashboard">
+                <div class="sidebar-brand-text mx-3 ttn">
+                    <div class="right">
+                       ASK
+                    </div>
+                </div>
+            </a>
+
+            <hr class="sidebar-divider my-0">
+
+            <li class="nav-item active">
+    <a class="nav-link" href="#/dashboard">
+        <i class="fas fa-home"></i>
+        <span>Dashboard</span>
+    </a>
+</li>
+
+<li class="nav-item ">
+    <a class="nav-link" href="#/setting/general">
+        <i class="far fa-caret-square-right"></i>
+        <span>Website Settings</span>
+    </a>
+</li>
+
+
+<li class="nav-item ">
+    <a class="nav-link" href="#/language/index">
+        <i class="far fa-caret-square-right"></i>
+        <span>Language Settings</span>
+    </a>
+</li>
+
+
+<li class="nav-item dd ">
+    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapse_blog" aria-expanded="true" aria-controls="collapse_blog">
+        <i class="fas fa-folder"></i>
+        <span>Blog Section</span>
+    </a>
+    <div id="collapse_blog" class="collapse " data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="#/post-category/index">Post Category</a>
+            <a class="collapse-item" href="#/post/index">Post</a>
+        </div>
+    </div>
+</li>
+
+
+<li class="nav-item dd ">
+    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapse_subscriber" aria-expanded="true" aria-controls="collapse_subscriber">
+        <i class="fas fa-folder"></i>
+        <span>Subscribers</span>
+    </a>
+    <div id="collapse_subscriber" class="collapse " data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="#/subscriber/index">All Subscribers</a>
+            <a class="collapse-item" href="#/subscriber/send-message">Send Message to All</a>
+        </div>
+    </div>
+</li>
+
+
+<li class="nav-item dd ">
+    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapse_all_sections" aria-expanded="true" aria-controls="collapse_all_sections">
+        <i class="fas fa-folder"></i>
+        <span>All Sections</span>
+    </a>
+    <div id="collapse_all_sections" class="collapse " data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="#/fun-fact/index">Fun Fact</a>
+            <a class="collapse-item" href="#/marquee/index">Marquee</a>
+            <a class="collapse-item" href="#/offer/index">Offer</a>
+            <a class="collapse-item" href="#/call-to-action/index">Call To Action</a>
+            <a class="collapse-item" href="#/welcome-one/item">Welcome One</a>
+            <a class="collapse-item" href="#/welcome-two/item">Welcome Two</a>
+            <a class="collapse-item" href="#/video-one/item">Video One</a>
+            <a class="collapse-item" href="#/video-two/item">Video Two</a>
+            <a class="collapse-item" href="#/feature-one/item">Feature One</a>
+            <a class="collapse-item" href="#/feature-two/item">Feature Two</a>
+            <a class="collapse-item" href="#/why-choose-one/item">Why Choose One</a>
+            <a class="collapse-item" href="#/why-choose-two/item">Why Choose Two</a>
+        </div>
+    </div>
+</li>
+
+<li class="nav-item dd ">
+    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapse_home_pages" aria-expanded="true" aria-controls="collapse_home_pages">
+        <i class="fas fa-folder"></i>
+        <span>Home Pages</span>
+    </a>
+    <div id="collapse_home_pages" class="collapse " data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="#/home-page/1/index">New Page </a>
+            <!-- <a class="collapse-item" href="#/home-page/2/index">Home Page 2</a>
+            <a class="collapse-item" href="#/home-page/3/index">Home Page 3</a>
+            <a class="collapse-item" href="#/home-page/4/index">Home Page 4</a> -->
+            <a class="collapse-item" href="#/home-page/contact/photo/index">Contact Photos</a>
+        </div>
+    </div>
+</li>
+
+
+<li class="nav-item ">
+    <a class="nav-link" href="#/other-page/index">
+        <i class="far fa-caret-square-right"></i>
+        <span>Other Pages</span>
+    </a>
+</li>
+
+
+<li class="nav-item ">
+    <a class="nav-link" href="#/menu/index">
+        <i class="far fa-caret-square-right"></i>
+        <span>Menu Manage</span>
+    </a>
+</li>
+
+
+<li class="nav-item ">
+    <a class="nav-link" href="#/slider/index">
+        <i class="far fa-caret-square-right"></i>
+        <span>Slider</span>
+    </a>
+</li>
+
+<li class="nav-item ">
+    <a class="nav-link" href="#/service/index">
+        <i class="far fa-caret-square-right"></i>
+        <span>Service</span>
+    </a>
+</li>
+
+<li class="nav-item ">
+    <a class="nav-link" href="#/portfolio/index">
+        <i class="far fa-caret-square-right"></i>
+        <span>Portfolio</span>
+    </a>
+</li>
+
+<li class="nav-item ">
+    <a class="nav-link" href="#/team-member/index">
+        <i class="far fa-caret-square-right"></i>
+        <span>Team Members</span>
+    </a>
+</li>
+
+<li class="nav-item ">
+    <a class="nav-link" href="#/testimonial/index">
+        <i class="far fa-caret-square-right"></i>
+        <span>Testimonial</span>
+    </a>
+</li>
+
+<li class="nav-item ">
+    <a class="nav-link" href="#/faq/index">
+        <i class="far fa-caret-square-right"></i>
+        <span>FAQ</span>
+    </a>
+</li>
+
+<!-- <li class="nav-item ">
+    <a class="nav-link" href="#/pricing-plan/index">
+        <i class="far fa-caret-square-right"></i>
+        <span>Pricing Plan</span>
+    </a>
+</li> -->
+
+<!-- <li class="nav-item ">
+    <a class="nav-link" href="#/client/index">
+        <i class="far fa-caret-square-right"></i>
+        <span>Clients</span>
+    </a>
+</li> -->
+            <hr class="sidebar-divider">
+
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
+
+        <div id="content-wrapper" class="d-flex flex-column pb_50">
+            <div id="content">
+
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+        <i class="fa fa-bars"></i>
+    </button>
+    <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item dropdown no-arrow mx-1">
+            <a class="btn btn-info btn-sm mt_20" href="https://askdigitalagency.com" target="_blank">
+                Visit Website
+            </a>
+        </li>
+
+        <li class="nav-item dropdown no-arrow">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600">Arbaz khan</span>
+                                <img class="img-profile rounded-circle" src="http://media.licdn.com/dms/image/v2/D5603AQFMCQMKyVNDjw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1727007711535?e=1744848000&v=beta&t=Zafi-63_zYp7UTokXGa5jvsIww242pxfge3iuw2ZZ4o">
+                            </a>
+            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"  data-bs-popper="static" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#/profile">
+                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> Edit Profile
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#/logout">
+                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> Logout
+                </a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+
+<div class="container-fluid">
+
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+<h1 class="h3 mb-0 text-gray-800">Posts</h1>
+<a href="#" class="d-none d-sm-inline-block btn btn-primary shadow-sm"><i class="fas fa-plus"></i> Add Item
+</a>
+</div>
+
+<div class="card shadow mb-4">
+<div class="card-body">
+<div class="table-responsive">
+<table class="table table-bordered table-sm" id="dtable">
+<thead>
+    <tr>
+        <th>SL</th>
+        <th>Photo</th>
+        <th>Title</th>
+        <th>Category</th>
+        <th>Action</th>
+    </tr>
+</thead>
+<tbody>
+                        <tr>
+        <td>1</td>
+        <td>
+            <div class="photo-container">
+                <a href="https://demo.phpscriptpoint.com/desix/uploads/post_1704688156.jpg" class="magnific"><img src="https://demo.phpscriptpoint.com/desix/uploads/post_1704688156.jpg" alt=""></a>
+            </div>
+        </td>
+        <td>Social Media Success: Pro Strategies for You</td>
+        <td>Business</td>
+        <td>
+            <a href="https://demo.phpscriptpoint.com/desix/admin/post/edit/3" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
+            <a href="https://demo.phpscriptpoint.com/desix/admin/post/destroy/3" class="btn btn-danger btn-sm" onClick="return confirm('Are you sure?')"><i class="fas fa-trash"></i></a>
+        </td>
+    </tr>
+                        <tr>
+        <td>2</td>
+        <td>
+            <div class="photo-container">
+                <a href="https://demo.phpscriptpoint.com/desix/uploads/post_1704688078.jpg" class="magnific"><img src="https://demo.phpscriptpoint.com/desix/uploads/post_1704688078.jpg" alt=""></a>
+            </div>
+        </td>
+        <td>Web Design Essentials for Optimal User Experience</td>
+        <td>Web Design</td>
+        <td>
+            <a href="https://demo.phpscriptpoint.com/desix/admin/post/edit/2" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
+            <a href="https://demo.phpscriptpoint.com/desix/admin/post/destroy/2" class="btn btn-danger btn-sm" onClick="return confirm('Are you sure?')"><i class="fas fa-trash"></i></a>
+        </td>
+    </tr>
+                        <tr>
+        <td>3</td>
+        <td>
+            <div class="photo-container">
+                <a href="https://demo.phpscriptpoint.com/desix/uploads/post_1704687929.jpg" class="magnific"><img src="https://demo.phpscriptpoint.com/desix/uploads/post_1704687929.jpg" alt=""></a>
+            </div>
+        </td>
+        <td>Digital Branding Mastery: Your Ultimate Guide</td>
+        <td>Digital Agency</td>
+        <td>
+            <a href="https://demo.phpscriptpoint.com/desix/admin/post/edit/1" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
+            <a href="https://demo.phpscriptpoint.com/desix/admin/post/destroy/1" class="btn btn-danger btn-sm" onClick="return confirm('Are you sure?')"><i class="fas fa-trash"></i></a>
+        </td>
+    </tr>
+                    </tbody>
+</table>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+
+<a class="scroll-to-top rounded" href="#page-top">
+<i class="fas fa-angle-up"></i>
+</a>
+
+<script src="https://demo.phpscriptpoint.com/desix/dist-admin/js/sb-admin-2.min.js"></script>
+<script src="https://demo.phpscriptpoint.com/desix/dist-admin/js/custom.js"></script>
+
+
+</body>
+</html>
