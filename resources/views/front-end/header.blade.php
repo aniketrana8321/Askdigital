@@ -271,141 +271,16 @@
                 <li class="nav-item">
                   <a class="nav-link" href="{{ route('frontend.reviews') }}">Testimonial</a>
                 </li>
-                <!--<li class="nav-item">-->
-                <!--  <a class="nav-link" href="#">Blog</a>-->
-                <!--</li>-->
-                <!-- Home -->
-                <!--<li class="nav-item dropdown">-->
-                <!--  <a class="nav-link active dropdown-toggle" href="{{ url('/') }}" data-bs-toggle="dropdown">Home</a>-->
-                  
-                  <!--<ul class="dropdown-menu">-->
-                  <!--  <li>-->
-                  <!--    <a href="index#">Home 01</a>-->
-                  <!--  </li>-->
-                  <!--  <li>-->
-                  <!--    <a href="index-2#">Home 02</a>-->
-                  <!--  </li>-->
-                  <!--  <li>-->
-                  <!--    <a href="index-3#">Home 03</a>-->
-                  <!--  </li>-->
-                  <!--</ul>-->
-                </li>
-                <!--<li class="nav-item dropdown">-->
-                <!--  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Pages</a>-->
-                <!--  <ul class="dropdown-menu">-->
-                <!--    <li>-->
-                <!--      <a href="about-us#">About Us</a>-->
-                <!--    </li>-->
-                <!--    <li>-->
-                <!--      <a href="team#">Team</a>-->
-                <!--    </li>-->
-                <!--    <li>-->
-                <!--      <a href="team-single#">Team Single</a>-->
-                <!--    </li>-->
-                <!--    <li>-->
-                <!--      <a href="price-table#">Price Table</a>-->
-                <!--    </li>-->
-                <!--    <li>-->
-                <!--      <a href="faq#">Faq</a>-->
-                <!--    </li>-->
-                <!--    <li>-->
-                <!--      <a href="login#">Login</a>-->
-                <!--    </li>-->
-                <!--    <li>-->
-                <!--      <a href="coming-soon#">Coming Soon</a>-->
-                <!--    </li>-->
-                <!--    <li>-->
-                <!--      <a href="error-404#">Error 404</a>-->
-                <!--    </li>-->
-                <!--  </ul>-->
-                <!--</li>-->
-                <!--<li class="nav-item dropdown">-->
-                <!--  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Shop</a>-->
-                <!--  <ul class="dropdown-menu">-->
-                <!--    <li>-->
-                <!--      <a href="product-grid#">Product Grid</a>-->
-                <!--    </li>-->
-                <!--    <li>-->
-                <!--      <a href="product-list#">Product List</a>-->
-                <!--    </li>-->
-                <!--    <li>-->
-                <!--      <a href="product-single#">Product Single</a>-->
-                <!--    </li>-->
-                <!--    <li>-->
-                <!--      <a href="product-cart#">Cart</a>-->
-                <!--    </li>-->
-                <!--    <li>-->
-                <!--      <a href="product-checkout#">Checkout</a>-->
-                <!--    </li>-->
-                <!--    <li>-->
-                <!--      <a href="order-complete#">Order Completed</a>-->
-                <!--    </li>-->
-                <!--    <li>-->
-                <!--      <a href="forgot-password#">Forgot Password</a>-->
-                <!--    </li>-->
-                <!--  </ul>-->
-                <!--</li>-->
-                <!--<li class="nav-item dropdown">-->
-                <!--  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>-->
-                <!--  <ul class="dropdown-menu">-->
-                <!--    <li>-->
-                <!--      <a href="services-one#">Service Style One</a>-->
-                <!--    </li>-->
-                <!--    <li>-->
-                <!--      <a href="services-two#">Service Style Two</a>-->
-                <!--    </li>-->
-                <!--    <li>-->
-                <!--      <a href="services-three#">Service Style Three</a>-->
-                <!--    </li>-->
-                <!--    <li>-->
-                <!--      <a href="services-single#">Service Single</a>-->
-                <!--    </li>-->
-                <!--  </ul>-->
-                <!--</li>-->
-                <!--<li class="nav-item dropdown">-->
-                <!--  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Portfolio</a>-->
-                <!--  <ul class="dropdown-menu">-->
-                <!--    <li>-->
-                <!--      <a href="portfolio-grid-2#">Portfolio Grid 2</a>-->
-                <!--    </li>-->
-                <!--    <li>-->
-                <!--      <a href="portfolio-grid-3#">Portfolio Grid 3</a>-->
-                <!--    </li>-->
-                <!--    <li>-->
-                <!--      <a href="portfolio-slider#">Portfolio Slider</a>-->
-                <!--    </li>-->
-                <!--    <li>-->
-                <!--      <a href="portfolio-single#">Portfolio Single</a>-->
-                <!--    </li>-->
-                <!--  </ul>-->
-                <!--</li>-->
-                <!--<li class="nav-item dropdown">-->
-                <!--  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blogs</a>-->
-                <!--  <ul class="dropdown-menu">-->
-                <!--    <li>-->
-                <!--      <a href="blog-left-sidebar#">Blog Left Sidebar</a>-->
-                <!--    </li>-->
-                <!--    <li>-->
-                <!--      <a href="blog-right-sidebar#">Blog Right Sidebar</a>-->
-                <!--    </li>-->
-                <!--    <li>-->
-                <!--      <a href="blog-single#">Blog Single</a>-->
-                <!--    </li>-->
-                <!--  </ul>-->
-                <!--</li>-->
-               <li class="nav-item">
+                      <li class="nav-item">
     <a class="nav-link" href="{{ route('contact.create') }}">Contact</a>
 </li>
 
+              
+                
+               
               </ul>
             </div>
-            <div class="header-number me-4">
-              <i class="flaticon flaticon-telephone"></i>
-              <div>
-                <span>Have Question:</span>
-                <a href="tel:+91 8219941967">+91 8219941967</a>
-              </div>
-            </div>
+           
             <a class="themeht-btn primary-btn" href="https://drive.google.com/file/d/1Twk7RI1aglc5fZZQCGOq0eg2OWbk0c-4/view?usp=drive_link">
               <span class="btn-icon1">
                 <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">

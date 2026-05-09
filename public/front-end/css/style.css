@@ -1209,3 +1209,10 @@ iframe { width: 100%; border: none; pointer-events: auto; }
   }
 }
 /*insta css end*/
+
+ul.nav.navbar-nav {
+    margin: 0px !important;
+}
+
+
+

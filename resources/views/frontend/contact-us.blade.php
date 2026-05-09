@@ -221,8 +221,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="map iframe-h">
-         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.952464515035!2d76.95388467521992!3d28.390503675797788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbc590a9c9ed8925%3A0x9341367e22063d6!2sAsk%20Digital%20Agency!5e0!3m2!1sen!2sin!4v1778220708218!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          <iframe src="https://www.google.com/maps/d/embed?mid=1ybxd1iErruNm1aKFgN0Fxt20E0Pfhtw&ehbc=2E312F" width="640" height="480"></iframe>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.952464515035!2d76.95388467521992!3d28.390503675797788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbc590a9c9ed8925%3A0x9341367e22063d6!2sAsk%20Digital%20Agency!5e0!3m2!1sen!2sin!4v1778306019585!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
