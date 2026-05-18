@@ -198,7 +198,7 @@
                   <a class="nav-link" href="{{ route('frontend.about') }}">About us</a>
                 </li>
                 
-<li class="nav-item dropdown mega-menu-main">
+<li class="nav-item dropdown mega-menu-main mobile-dropdown">
     <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown">
         SERVICES
     </a>
@@ -227,7 +227,7 @@
 
 
 <!-- "Industries" Mega Menu -->
-<li class="nav-item mega-menu-main">
+<li class="nav-item dropdown mega-menu-main mobile-dropdown">
     @php
         $industryCategory = App\Models\ServiceCategory::where('name', 'Industries')->first();
     @endphp
@@ -302,3 +302,150 @@
 </header>
 
 <!--header end-->
+
+<style>
+@media (max-width: 1199px) {
+  /* 1. FORCE THE MENU TO BE HIDDEN BY DEFAULT ON MOBILE */
+  .navbar-nav .mobile-dropdown .mega-menu-wrapper {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: relative !important; /* Positions it cleanly right under the link text */
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  /* 2. INSTANT VISIBILITY ONLY WHEN CUSTOM CLASS IS ACTIVE */
+  .navbar-nav .mobile-dropdown.mobile-open .mega-menu-wrapper {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    
+    /* Elegant Rounded Card Style Layout */
+    background: #ffffff !important;
+    border-radius: 12px !important; 
+    margin-top: 10px !important;
+    margin-bottom: 12px !important;
+    padding: 18px !important;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+  }
+
+  /* 3. VERTICAL MOBILE GRID CORRECTIONS */
+  .mega-menu-content,
+  .industries-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    width: 100% !important;
+  }
+
+  .mega-category-column {
+    width: 100% !important;
+    display: block !important;
+  }
+
+  .mega-menu-wrapper .mega-category-column .category-title {
+    color: #000000 !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    margin-bottom: 6px !important;
+    display: block !important;
+  }
+
+  .sub-service-list {
+    padding-left: 6px !important;
+    margin: 0 !important;
+    list-style: none !important;
+  }
+
+  .mega-menu-wrapper .mega-category-column .sub-service-list li a {
+    color: #333333 !important;
+    font-size: 14px !important;
+    display: block !important;
+    padding: 6px 0 !important;
+    text-decoration: none !important;
+  }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    
+    const isMobileBreakpoint = () => window.innerWidth < 1200;
+
+    // 1. DEDICATED TOUCH SELECTION HANDLER
+    const targetToggles = document.querySelectorAll('.mobile-dropdown > .dropdown-toggle');
+    
+    targetToggles.forEach(function (toggle) {
+        // Completely disarm Bootstrap's native triggers to stop code interference
+        toggle.removeAttribute('data-bs-toggle');
+        toggle.removeAttribute('data-toggle');
+
+        toggle.addEventListener('click', function (e) {
+            if (isMobileBreakpoint()) {
+                e.preventDefault(); 
+                e.stopPropagation(); 
+
+                const parentElement = this.parentElement;
+                const isAlreadyOpen = parentElement.classList.contains('mobile-open');
+
+                // Close any other open sub-menus first
+                document.querySelectorAll('.mobile-dropdown').forEach(function (menu) {
+                    menu.classList.remove('mobile-open');
+                });
+
+                // Toggle current sub-menu wrapper instantly
+                if (!isAlreadyOpen) {
+                    parentElement.classList.add('mobile-open');
+                }
+            }
+        });
+    });
+
+    // 2. DISMISS ON BACKDROP TAP (Tapping anywhere outside closes the active modules)
+    document.addEventListener('click', function (e) {
+        if (isMobileBreakpoint()) {
+            // If tap happens completely outside of a dropdown container element
+            if (!e.target.closest('.mobile-dropdown')) {
+                
+                // Clear the active mobile menu card states
+                document.querySelectorAll('.mobile-dropdown').forEach(function (menu) {
+                    menu.classList.remove('mobile-open');
+                });
+
+                // Safely fold back the parent global responsive layout canvas
+                const navigationDrawer = document.querySelector('#navbarNav');
+                if (navigationDrawer && navigationDrawer.classList.contains('show')) {
+                    const primaryHamburgerButton = document.querySelector('.navbar-toggler');
+                    if (primaryHamburgerButton) {
+                        primaryHamburgerButton.click(); // Uses standard theme callback functions to close out
+                    } else {
+                        navigationDrawer.classList.remove('show');
+                    }
+                }
+            }
+        }
+    });
+
+    // 3. IMMEDIATE DISMISSAL AND ROUTING ENHANCEMENT FOR REDIRECT LINKS
+    const clickableDestinations = document.querySelectorAll('.navbar-nav .nav-link:not(.dropdown-toggle), .mega-menu-wrapper a');
+    
+    clickableDestinations.forEach(function (link) {
+        link.addEventListener('click', function () {
+            if (isMobileBreakpoint()) {
+                document.querySelectorAll('.mobile-dropdown').forEach(el => el.classList.remove('mobile-open'));
+                const navigationDrawer = document.querySelector('#navbarNav');
+                if (navigationDrawer) {
+                    navigationDrawer.classList.remove('show');
+                }
+            }
+        });
+    });
+});
+</script>

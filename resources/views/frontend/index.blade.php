@@ -318,44 +318,7 @@ Based in Gurugram "India", ASK Digital Agency blends creativity,
 </section>
 
 
-<section class="portfolio-section instagram-section">
-  <div class="container">
 
-    
-
-    <div class="instagram-grid">
-
-      <!-- Instagram Post 1 -->
-      <div class="instagram-card">
-        <blockquote 
-          class="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/p/DILxaTLps9-/"
-          data-instgrm-version="14">
-        </blockquote>
-      </div>
-<div class="instagram-card">
-        <blockquote 
-          class="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/reel/DYEfeKoOyVn/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-          data-instgrm-version="14">
-        </blockquote>
-      </div>
-
-      <!-- Instagram Post 2 -->
-      <div class="instagram-card">
-        <blockquote 
-          class="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/p/DXd7KZ7gfQp/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-          data-instgrm-version="14">
-        </blockquote>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<script async src="https://www.instagram.com/embed.js"></script>
 
 
 
